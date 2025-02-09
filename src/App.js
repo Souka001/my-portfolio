@@ -12,8 +12,9 @@ function App() {
   return (
     <Router>
     <NavBar />
+    <Banner />
     <section id="home">
-      <Banner />
+      
     </section>
     <section id="skills">
       <Skills />
