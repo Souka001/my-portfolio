@@ -11,29 +11,36 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <Router>
-      <NavBar />
       <Routes>
         {/* Home Page */}
         <Route
           path="/"
           element={
             <>
+              <NavBar />
               <Banner />
               <Skills /> 
               <Projects/>
               <Contact />
+              <Footer/>
             </>
           }
         />
 
         {/* Skills Page */}
-        <Route path="/Skills" element={<Skills />} />
+        <Route path="/Skills" element={
+          <>
+          <NavBar /> <Skills /> <Footer/>
+          </> } />
          {/* Projects Page */}
-         <Route path="/Projects" element={<Projects />} />
-         <Route path="/Contact" element={<Contact />} />
+         <Route path="/Projects" element={<>
+          <NavBar /> <Projects /> <Footer/>
+          </> } />
+         <Route path="/Contact" element={<>
+          <NavBar /> <Contact /> <Footer/>
+          </> } />
 
       </Routes>
-      <Footer/>
     </Router>
   );
 }
