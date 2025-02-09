@@ -11,13 +11,12 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <HashRouter>
-      {/* NavBar دايماً ظاهر فوق */}
+      
       <NavBar />
-      {/* Routes ديال صفحات الموقع */}
       <Routes>
         {/* Home Page */}
         <Route
-          path="/"
+          path="/#"
           element={
             <>
               <Banner />
@@ -29,15 +28,14 @@ function App() {
         />
 
         {/* Skills Page */}
-        <Route path="/Skills" element={<Skills />} />
+        <Route path="/#/Skills" element={<Skills />} />
 
         {/* Projects Page */}
-        <Route path="/Projects" element={<Projects />} />
+        <Route path="/#/Projects" element={<Projects />} />
 
         {/* Contact Page */}
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/#/Contact" element={<Contact />} />
       </Routes>
-      {/* Footer دايماً ظاهر تحت */}
       <Footer />
     </HashRouter>
   );
