@@ -1,5 +1,5 @@
 import "./App.css";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
@@ -10,8 +10,10 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
+      {/* NavBar دايماً ظاهر فوق */}
       <NavBar />
+      {/* Routes ديال صفحات الموقع */}
       <Routes>
         {/* Home Page */}
         <Route
@@ -19,8 +21,8 @@ function App() {
           element={
             <>
               <Banner />
-              <Skills /> 
-              <Projects/>
+              <Skills />
+              <Projects />
               <Contact />
             </>
           }
@@ -28,13 +30,16 @@ function App() {
 
         {/* Skills Page */}
         <Route path="/Skills" element={<Skills />} />
-         {/* Projects Page */}
-         <Route path="/Projects" element={<Projects />} />
-         <Route path="/Contact" element={<Contact />} />
 
+        {/* Projects Page */}
+        <Route path="/Projects" element={<Projects />} />
+
+        {/* Contact Page */}
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
-      <Footer/>
-    </Router>
+      {/* Footer دايماً ظاهر تحت */}
+      <Footer />
+    </HashRouter>
   );
 }
 
