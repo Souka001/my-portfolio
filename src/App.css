@@ -24,16 +24,20 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    min-height: 100vh; /* Assure une hauteur totale de la page */
+    display: flex;
+    flex-direction: column;
+ 
   font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
+ 
  
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
 
+main {
+  flex: 1; /* Laisse le contenu occuper tout l'espace disponible */
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;

@@ -13,6 +13,7 @@ function Footer() {
   return (
     <footer className="glob" style={{
     bottom: 0,
+    position:"relative",
     width: "100%",
     background: "#1A1A1A",
     color: "white",
