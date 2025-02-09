@@ -11,10 +11,11 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <Router>
-    <NavBar />
-    <Banner />
+    
     <section id="home">
-      
+    <NavBar />
+      <Banner />
+      <Footer />
     </section>
     <section id="skills">
       <Skills />
@@ -25,7 +26,7 @@ function App() {
     <section id="contact">
       <Contact />
     </section>
-    <Footer />
+    
   </Router>
   );
 }
