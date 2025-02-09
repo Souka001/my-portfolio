@@ -18,7 +18,7 @@ function Footer() {
     color: "white",
     textAlign: "center",
     padding: "20px",
-     
+    
     }}>
       <Container>
         <Row>

@@ -23,11 +23,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -537,6 +532,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-style: italic;
   margin-top: 10px;
 }
+
 .logofooter {
   transition: transform 0.3s ease-in-out;
 }

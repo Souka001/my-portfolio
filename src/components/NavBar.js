@@ -5,7 +5,7 @@ import navicon1 from '../assets/img/navicon1.svg';
 import navicon3 from '../assets/img/navicon3.svg';
 import iconFooter from '../assets/img/iconFooter.svg';
 
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { HashLink as Link } from "react-router-hash-link"; // ✅ Use HashLink
 
 function NavBar() {
     const [activeLink, setActiveLink] = useState('home');
@@ -31,7 +31,8 @@ function NavBar() {
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand as={Link} to="/"> {/* ✅ Redirect home */}
+                {/* Logo link */}
+                <Navbar.Brand as={Link} to="/#"> {/* ✅ Redirect home */}
                     <img className="logonavbar" src={logo} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -40,19 +41,56 @@ function NavBar() {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/" exact className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                    <Nav.Link as={Link} to="/Skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                    <Nav.Link as={Link} to="/Projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                    <Nav.Link as={Link} to="/Contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
+                        {/* Home */}
+                        <Nav.Link 
+    as={Link} 
+    to="/#home" 
+    className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
+    onClick={() => onUpdateActiveLink('home')}
+>
+    Home
+</Nav.Link>
 
+<Nav.Link 
+    as={Link} 
+    to="/#skills" 
+    className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
+    onClick={() => onUpdateActiveLink('skills')}
+>
+    Skills
+</Nav.Link>
+
+<Nav.Link 
+    as={Link} 
+    to="/#projects" 
+    className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
+    onClick={() => onUpdateActiveLink('projects')}
+>
+    Projects
+</Nav.Link>
+
+<Nav.Link 
+    as={Link} 
+    to="/#contact" 
+    className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} 
+    onClick={() => onUpdateActiveLink('contact')}
+>
+    Contact
+</Nav.Link>
                     </Nav>
+
+                    {/* Social Media Icons */}
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/soukaina-azaqui-931924185/"><img src={navicon1} alt="icon_linkedin" /></a>
-                            <a href="https://www.instagram.com/az__souka/profilecard/?igsh=MXNiNTZqZjRubHY3"><img src={navicon3} alt="icon_instagram" /></a>
-                            <a href="mailto:soukainaiziki2001@gmail.com"><img src={iconFooter} alt="icon_gmail"/></a>
-
-
+                            <a href="https://www.linkedin.com/in/soukaina-azaqui-931924185/">
+                                <img src={navicon1} alt="icon_linkedin" />
+                            </a>
+                            <a href="https://www.instagram.com/az__souka/profilecard/?igsh=MXNiNTZqZjRubHY3">
+                                <img src={navicon3} alt="icon_instagram" />
+                            </a>
+                            <a href="mailto:soukainaiziki2001@gmail.com">
+                                <img src={iconFooter} alt="icon_gmail"/>
+                            </a>
                         </div>
                     </span>
                 </Navbar.Collapse>
