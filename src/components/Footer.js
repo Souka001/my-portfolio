@@ -11,7 +11,15 @@ function Footer() {
   };
 
   return (
-    <footer className="glob">
+    <footer className="glob" style={{
+    bottom: 0,
+    width: "100%",
+    background: "#1A1A1A",
+    color: "white",
+    textAlign: "center",
+    padding: "20px",
+     
+    }}>
       <Container>
         <Row>
           <Col xs={12} style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>

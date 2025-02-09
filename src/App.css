@@ -29,10 +29,12 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+ 
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -445,15 +447,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #1A1A1A;
-  color: white;
-  text-align: center;
-  padding: 20px;
 }
 
 .projects {
