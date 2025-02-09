@@ -17,11 +17,11 @@
 }
 
 /************ Default Css ************/
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
     min-height: 100vh; /* Assure une hauteur totale de la page */
